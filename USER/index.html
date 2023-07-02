@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="nav__links">
+              <li><a href="#"> Уходовая косметика</a></li>
+              <li><a href="#"> Декоративная косметика</a></li>
+              <li><a href="#"> Косметика для волос</a></li>
+              <li><a href="#"> Уход за телом</a></li>
+            </ul>
+        </nav>
+          <button class="open-button"  onclick="openForm(event)">Вход</button>
+          <button class="open-button" onclick="openMyForm()">Регистрация</button>
+    
+     
+          <div class="form-popup" id="myForm">
+            <form action="#" class="form-container">
+              <h1 class="form__title">Войти</h1>
+              <input type="text" placeholder="Ваше имя" name="name" required id="userNameEnter">
+              <input type="text" placeholder="Ваш е-мейл" name="email" required id="userEmailEnter">
+              <input type="password" placeholder="Введите пароль" name="password"  required id="userPassEnter"> 
+              <button type="submit" class="btn" onclick="toEnter()">Войти</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+            </form>
+          </div>
+    
+          <div class="form-popup-pass" id="myForm2">
+            <form action="#" class="form-container-reg">
+              <h1 class="form__title">Регистрация</h1>
+              <label for="name"></label>
+              <input type="text" placeholder="Ваше имя" id="userName" required>
+              <label for="email"></label>
+              <input type="text" placeholder="Ваш е-мейл" id="userEmail" required>
+              <label for="password"></label>
+              <input type="password" placeholder="Введите пароль"  id="userPass" required> 
+              <button type="submit" class="btn" id="toRegistration" onclick="toRegistrate()">Зарегистрироваться</button>
+              <button type="button" class="btn cancel" onclick="closeMyForm()">Закрыть</button>
+            </form>
+          </div>
+      
+        <button class="button-cart" id="cart">
+          <img class="cart__image" src="./img/icons8-cart-64.png" alt="Cart" />
+          <div class="cart__num" id="cart_num">0</div>
+        </button>
+    </header>
+
+
+    <div class="cards"> 
+        <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-cosmetic-products-png-6717441.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">11 000</div>
+            <div class="card__price card__price--common">12 100</div>
+          </div>
+          <a href="#" class="card__title">
+            Помада красная
+          </a>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-cosmetics-items-png-2126995.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">18 000</div>
+            <div class="card__price card__price--common">19 000</div>
+          </div>
+          <a href="#" class="card__title">
+            Набор уходовой косметики
+          </a>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-cosmetics-products-png-1642356.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">4 000</div>
+            <div class="card__price card__price--common">50 000</div>
+          </div>
+          <a href="#" class="card__title">
+            Сыворотка
+          </a>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-cosmetics-items-png-2516070.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">10 000</div>
+            <div class="card__price card__price--common">12 000</div>
+          </div>
+          <a href="#" class="card__title">
+            Палетка теней
+          </a>
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-beard-hair-png-4687747.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">11 000</div>
+            <div class="card__price card__price--common">11 200</div>
+          </div>
+          <a href="#" class="card__title">
+            Сыворотка</a
+          >
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-cosmetics-items-images-png-5662810.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">12 000</div>
+            <div class="card__price card__price--common">21 300</div>
+          </div>
+          <a href="#" class="card__title">
+           Набор косметики какой-то</a
+          >
+          <button class="card__add">В корзину</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__top">
+          <a href="#" class="card__image">
+            <img
+              src="./img/pinpng.com-marshmallow-png-155342.png"
+              alt="Apple IPhone 14 PRO Max Gold"
+            />
+          </a>
+          <button class="card__like"></button>
+          <div class="card__label">-10%</div>
+        </div>
+        <div class="card__bottom">
+          <div class="card__prices">
+            <div class="card__price card__price--discount">15 000</div>
+            <div class="card__price card__price--common">15 500</div>
+          </div>
+          <a href="#" class="card__title">
+           Оч хороший крем</a
+          >
+          <button class="card__add">В корзину</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <img
+                src="./img/pinpng.com-marshmallow-png-155342.png"
+                alt="Apple IPhone 14 PRO Max Gold"
+              />
+            </a>
+            <button class="card__like"></button>
+            <div class="card__label">-10%</div>
+          </div>
+          <div class="card__bottom">
+            <div class="card__prices">
+              <div class="card__price card__price--discount">5 000</div>
+              <div class="card__price card__price--common">5 500</div>
+            </div>
+            <a href="#" class="card__title">
+             Оч хороший крем</a
+            >
+            <button class="card__add">В корзину</button>
+            </div>
+          </div>
+
+        
+      </div> 
+      </div>
+      <div class="popup">
+        <div class="popup_container" id="popup_container">
+          <div class="popop__item">
+            <h1 class="popup__title">Оформление заказа</h1>
+          </div>
+          <div class="popup__item" id="popup_product_list">
+            <div class="popup__product">
+              <div class="popup__product-wrap">
+                <img
+                  src="./img/pinpng.com-aloe-vera-png-1900946 (1).png"
+                  alt="Apple IPhone 14 Pro Max 256Gb"
+                  class="popup__product-image"
+                />
+                <h2 class="popup__product-title">
+                  <!-- добавляется товар  -->
+                </h2>
+              </div>
+              <div class="popup__product-wrap">
+                <div class="popup__product-price">11 980</div>
+                <button class="popup__product-delete">&#10006;</button>
+              </div>
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Итого</h2>
+              <output class="popup__cost-value" id="popup_cost">0</output>
+            </div>
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Скидка</h2>
+              <output class="popup__cost-value" id="popup_discount">0</output>
+            </div>
+            <div class="popup__cost">
+              <h2 class="popup__cost-title">Итого со скидкой</h2>
+              <output class="popup__cost-value" id="popup_cost_discount"
+                >0</output
+              >
+            </div>
+          </div>
+          <button class="popup__close" id="popup_close">&#10006;</button>
+      
+        </div>
+      </div>
+      
+    <script src="./login.js"></script>
+    <script src="./main.js"></script>
+    <script src="./pass.js"></script>
+</body>
+</html>
